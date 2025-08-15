@@ -1,6 +1,6 @@
 # from langchain_google_genai import ChatGoogleGenrativeAI
 # from langchain_anthropic import ChatAnthropic
-from langchain_openai import ChatOpenAI
+# from langchain_openai import ChatOpenAI
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
@@ -25,7 +25,7 @@ model = ChatGroq(model="llama3-70b-8192", api_key=groq_key)
 
 result = model.invoke(messages)
 
-print("Answer for Groq: {result.content}")  # Output the content of the AI's response
+print(f"Answer for Groq: {result.content}")  # Output the content of the AI's response
 
 # _________Langchain Anthropic chat Model_________
 
