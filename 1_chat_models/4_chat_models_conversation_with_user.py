@@ -12,8 +12,8 @@ model = ChatGroq(model="llama3-70b-8192", api_key=groq_key)
 chat_history = [] # store in list format
 
 # set an initial system message
-SystemMessage(content="You are an helpful AI assistant.")
-chat_history.append(SystemMessage) #Here we append the system message to the chat history
+
+chat_history.append(SystemMessage(content="You are an helpful AI assistant.")) #Here we append the system message to the chat history
 
 # chat loop 
 while True:
