@@ -28,7 +28,7 @@ parse_output = RunnableLambda(lambda x: x.content)
 # create a chain using RunnableSequence
 chain = RunnableSequence(first=format_prompt, middle=[invoke_model], last=parse_output)
 
-# chain = RunnableSequence(format_prompt | invoke_model | parse_output) --Langchain Expression Language
+# chain = format_prompt | invoke_model | parse_output --Langchain Expression Language
 
 result = chain.invoke({"animal": "Dog", "fact_count": 2})
 
