@@ -18,7 +18,7 @@ db = Chroma(
     embedding_function = embeddings
 )
 
-query = "what are the batmans rules?"
+query = "what are the batman's rules?"
 
 # configure the retriver
 retriver = db.as_retriever(
