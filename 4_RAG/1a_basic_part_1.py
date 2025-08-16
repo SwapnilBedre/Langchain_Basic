@@ -1,9 +1,9 @@
-import os
-from langchain_groq import ChatGroq
-from langchain_text_splitters import CharacterTextSplitter
-from langchain_community.document_loaders import TextLoader
-from langchain_community.vectorstores import Chroma
+
 from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_text_splitters import CharacterTextSplitter
+from langchain_groq import ChatGroq
+import os
+from langchain_community.vectorstores import Chroma
 from langchain_community.document_loaders import TextLoader
 
 
@@ -36,7 +36,7 @@ if not os.path.exists(persistant_directory):
     #  Display information about the split documents
     print("\n------- Split Documents Information -------")
     print(f"Total number of documents chunks: {len(docs)}")
-    print("sample chunk: \n{docs[0].page_content}\n")
+    print(f"sample chunk: \n{docs[0].page_content}\n")
 
     # create the embeddings
     embeddings = HuggingFaceEmbeddings(
